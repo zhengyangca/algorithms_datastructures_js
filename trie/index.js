@@ -3,9 +3,6 @@
  */
 var Trie = function() {
     this.words = [];
-    for(i = 0; i < 30; i++) {
-        this.words[i] = [];
-    }
 };
 
 /**
@@ -14,12 +11,7 @@ var Trie = function() {
  * @return {void}
  */
 Trie.prototype.insert = function(word) {
-    let stringCode = 0;
-    for(i = 0; i < word.length ; i ++) {
-        stringCode += word.charCodeAt(i);
-    }
-    const hashValue = stringCode%30;
-    this.words[hashValue].push(word);
+    
 };
 
 /**
@@ -28,20 +20,7 @@ Trie.prototype.insert = function(word) {
  * @return {boolean}
  */
 Trie.prototype.search = function(word) {
-    let stringCode = 0;
-    for(i = 0; i < word.length; i++) {
-        stringCode += word.charCodeAt(i);
-    }
-    const hashValue = stringCode%30;
-    for(let element of this.words[hashValue]) {
-        if(word === element) {
-            console.log(this.words);
-            console.log(`found ${word} at position ${hashValue}`);
-            return true;
-        }
-    }
-    console.log(`${word} not found!`);
-    return false;
+    
 };
 
 /**
@@ -60,11 +39,3 @@ Trie.prototype.startsWith = function(prefix) {
  * var param_2 = obj.search(word)
  * var param_3 = obj.startsWith(prefix)
  */
-
- const trie = new Trie();
- trie.insert('hello world');
- trie.insert('message monkey');
- trie.insert('ad');
- trie.insert('bc');
-
- trie.search('ad');
