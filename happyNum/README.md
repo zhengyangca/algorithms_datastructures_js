@@ -12,3 +12,7 @@ Explanation:
 82 + 22 = 68
 62 + 82 = 100
 12 + 02 + 02 = 1
+
+
+## Note
+1. The way to use Set to check if there is infinite loop.
