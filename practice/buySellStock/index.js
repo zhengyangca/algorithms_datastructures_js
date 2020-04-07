@@ -3,26 +3,16 @@
  * @return {number}
  */
 var maxProfit = function (prices) {
-    let maxPro = 0;
-    let profit;
-    let rest;
-    let buy;
-    let sell;
+    let profit = 0;
 
-    prices.forEach((buy, buyIndex) => {
-        rest = [...prices].splice(buyIndex + 1); // copy an array
-        if (rest.length > 0) {
-            sell = Math.max(...rest);
-            console.log('buy = ', buy, 'sell=', sell);
+    for(i = 0; i< prices.length; i++) {
+        const diff = prices[i + 1] - prices[i];
+        if(diff > 0) {
+            profit += diff;
         }
-        profit = sell - buy;
-        if (sell && (buy < sell)) {
-            console.log('profit:', profit);
-            maxPro = Math.max(profit, maxPro);
-        }
-    });
+    }
 
-    return maxPro;
+    return profit;
 };
 
 const prices = [7, 1, 5, 3, 6, 4];
