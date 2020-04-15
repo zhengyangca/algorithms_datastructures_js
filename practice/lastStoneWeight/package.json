@@ -1,0 +1,15 @@
+{
+  "name": "lastStoneWeight",
+  "version": "1.0.0",
+  "description": "We have a collection of stones, each stone has a positive integer weight.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "collections": "^5.1.10"
+  }
+}
