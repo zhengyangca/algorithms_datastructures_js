@@ -23,12 +23,12 @@ const dfs = (i, j, grid) => {
     if (i < 0 || i >= rows || j < 0 || j >= columns || grid[i][j] === '0') {
         return;
     }
-    
+
     grid[i][j] = '0';
 
     dfs(i - 1, j, grid);
     dfs(i, j - 1, grid);
-    dfs(i + 1, j, grid);
+    dfs(i + 1, j , grid);
     dfs(i, j + 1, grid);
 }
 
